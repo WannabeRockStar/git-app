@@ -1,0 +1,71 @@
+<template>
+    <router-link :to="`/users/${data.userId}/reps`">
+        <div class="card">
+        
+            <div class="card-image">
+                <img :src="data.image" alt="">
+            </div>
+            <div class="card-info">
+                <span>{{ id }}</span>
+                <h3 class="card-title">{{ data.name }}</h3>
+                <div class="card-type">{{ data.type }}</div>
+            </div>
+        </div>
+    </router-link>
+</template>
+
+<script>
+export default {
+    props: {
+        data: {
+            type: Object,
+            required: true
+        }
+    },
+    
+    mounted() {
+        // console.log(this.data.id)
+    }
+}
+</script>
+
+
+<style scoped lang="scss">
+    a {
+        display: block;
+        width: 66%;
+    }
+    .card {
+        width: 100%;
+        display: flex;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+        margin-bottom: 1rem;
+        gap: 1rem;
+        align-items: center;
+        cursor: pointer;
+        &-title {
+            color: #2F334B;
+        }
+        &-image {
+            border-radius: 50%;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+            position: relative;
+        }
+        &-type {
+            color: #9E9FA5;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            
+        }
+    }
+</style>

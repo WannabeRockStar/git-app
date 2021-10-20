@@ -1,45 +1,61 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-    <Filter />
-    <div class="card-container">
-      <Repo v-for="(item, index) in repositories" 
-      :key="index" 
-      :data="item" />
+    <div class="repo-header">
+      <svg style="width:24px;height:24px" viewBox="0 0 24 24" @click="navigateBack">
+        <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+      </svg>
+      {{ `${getUser.name}'s Works` }}
     </div>
+  <div class="repo-container">
+    <Repo v-for="(item, index) in getUserRepos" :key="index" :data="item" />
   </div>
 </template>
 
 <script>
 import Repo from '@/components/Repo.vue'
 import Filter from '@/components/Filter.vue'
+import { mapState } from 'vuex'
 export default {
   components: {
     Repo,
     Filter
   },
   data: () => ({
-    repositories: [
-      {
-        id: 1,
-        title: 'Lorem'
-      },
-      {
-        id: 2,
-        title: 'Ipsum'
-      }
-    ]
+    
   }),
 
+  computed: {
+    ...mapState(['repositories', 'users']),
+    getUserRepos() {
+      return this.repositories.filter(item => item.userId === Number(this.$route.params.id))
+    },
+    getUser() {
+      return this.users.find(item => item.userId === Number(this.$route.params.id))
+    }
+  },
+
+  methods: {
+    navigateBack() {
+      this.$router.go(-1)
+    }
+  },
+
   mounted() {
-    console.log(this.name)
+    console.log(this.repositories)
   }
 }
 </script>
 
 <style scoped lang="scss">
-  .card-container {
-    display: flex;
-    justify-content: space-between;
+.repo-header {
+  display: flex;
+  margin-bottom: 1rem;
+  svg {
+    cursor: pointer;
   }
+}
+.repo-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
 </style>

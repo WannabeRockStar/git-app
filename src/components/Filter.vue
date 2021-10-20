@@ -4,9 +4,9 @@
             <input type="text" v-model="title" class="form-control">
             <select v-model="type" class="form-control">
                 <option value="all">All</option>
-                <option value="type">Type</option>
+                <option value="user">User</option>
+                <option value="organisation">Organisation</option>
             </select>
-            <button class="btn-default">Search</button>
         </form>
     </div>
 </template>
@@ -18,6 +18,12 @@ export default {
         type :''
     }),
 
+    watch: {
+        title(value) {
+            this.$emit('search-filter', value)
+        }
+    },
+
     methods: {
         handleSearch() {
             console.log(this.title, this.type)
@@ -28,10 +34,13 @@ export default {
 
 <style lang="scss" scoped>
     .form-control {
-        height: 40px;
+        height: 34px;
+        border: 1px solid #ddd;
+        text-indent: .5rem;
+        outline: none;
+        border-radius: 8px;
+        width: 280px;
+        color: #666;
     }
-    .btn-default {
-        height: 40px;
-
-    }
+    
 </style>

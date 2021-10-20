@@ -12,7 +12,7 @@ export default createStore({
       {
         userId: 2,
         image: 'http://bennettmining.com/wp-content/uploads/2014/08/team1.jpg',
-        name: 'Gertruda',
+        name: 'Gertrude',
         type: 'User'
       },
       {
@@ -78,6 +78,8 @@ export default createStore({
         title: 'Lorem',
         language: 'php',
         license: true,
+        stars: 2,
+        forks: 12,
         update: 'March 11, 2020',
         userId: 2,
       },
@@ -86,22 +88,28 @@ export default createStore({
         title: 'Ipsum',
         language: 'javascript',
         license: true,
+        stars: 5,
+        forks: 3,
         update: 'March 11, 2020',
-        userId: 4
+        userId: 2
       },
       {
         id: 2,
         title: 'Dolor',
         language: 'javascript',
         license: true,
+        stars: 4,
+        forks: 1,
         update: 'March 11, 2020',
-        userId: 7
+        userId: 2
       },
       {
         id: 2,
         title: 'Dolor',
         language: 'javascript',
         license: true,
+        stars: 5,
+        forks: 35,
         update: 'March 11, 2020',
         userId: 11
       },
@@ -110,6 +118,8 @@ export default createStore({
         title: 'Dolor',
         language: 'javascript',
         license: true,
+        stars: 3,
+        forks: 7,
         update: 'March 11, 2020',
         userId: 3
       },
@@ -118,6 +128,8 @@ export default createStore({
         title: 'Dolor',
         language: 'javascript',
         license: true,
+        stars: 2,
+        forks: 10,
         update: 'March 11, 2020',
         userId: 1
       },
@@ -126,6 +138,8 @@ export default createStore({
         title: 'Awesome Project',
         language: 'javascript',
         license: true,
+        stars: 2,
+        forks: 12,
         update: 'March 11, 2020',
         userId: 1
       },

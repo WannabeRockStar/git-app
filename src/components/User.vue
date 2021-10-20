@@ -6,7 +6,6 @@
                 <img :src="data.image" alt="">
             </div>
             <div class="card-info">
-                <span>{{ id }}</span>
                 <h3 class="card-title">{{ data.name }}</h3>
                 <div class="card-type">{{ data.type }}</div>
             </div>
@@ -41,7 +40,7 @@ export default {
         border: 1px solid #eee;
         border-radius: 8px;
         padding: 1rem;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
         margin-bottom: 1rem;
         gap: 1rem;
         align-items: center;

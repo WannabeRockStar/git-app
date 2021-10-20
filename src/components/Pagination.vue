@@ -118,7 +118,7 @@ export default {
             // background: red;
             border: 1px solid #eee;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+            box-shadow: 0 2px 3px rgba(0, 0, 0, .25);
             padding: 2px;
             width: 30px;
             display: flex;
@@ -133,7 +133,7 @@ export default {
         &-switch {
             border: 1px solid #eee;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+            box-shadow: 0 2px 3px rgba(0, 0, 0, .25);
             padding: 2px 10px;
             width: auto;
             cursor: pointer;

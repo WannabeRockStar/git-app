@@ -77,4 +77,17 @@ export default {
     align-items: center;
     padding-bottom: 3rem;
   }
+  form {
+    display: flex;
+    gap: 8px;
+    .form-control {
+      width: 300px;
+      height: 34px;
+      border-radius: 4px;
+      border: 1px solid #d0d7de;
+      outline: none;
+      text-indent: 10px;
+      font-size: 14px;
+    }
+  }
 </style>

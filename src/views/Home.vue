@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div>
+    <div class="filter-container">
         <form @submit.prevent="handleSearch">
             <input type="text" v-model="name" placeholder="search" class="form-control">
             <select v-model="type" class="form-control select-width">
@@ -16,7 +16,9 @@
         </form>
     </div>
 
-    <User v-for="(item, index) in filterUsers" :key="index" :data="item" />
+    <div class="user-container">
+      <User v-for="(item, index) in filterUsers" :key="index" :data="item" />
+    </div>
     <!-- {{ dataLength }} -->
     <Pagination 
       :dataLength="dataLength" 
@@ -81,11 +83,20 @@ export default {
     align-items: center;
     padding-bottom: 3rem;
   }
+  .filter-container {
+    width: 100%;
+  }
+  .user-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+  }
   form {
     display: flex;
     gap: 8px;
     .form-control {
-      width: 300px;
+      width: 50%;
       height: 34px;
       border-radius: 4px;
       border: 1px solid #d0d7de;
@@ -94,7 +105,7 @@ export default {
       font-size: 14px;
     }
     .select-width {
-      width: 150px;
+      width: 25%;
     }
   }
 </style>

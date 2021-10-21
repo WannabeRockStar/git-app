@@ -64,6 +64,9 @@ export default {
         cursor: pointer;
         color: #4a5057;
         font-size: 14px;
+        @media(max-width: 800px) {
+            width: 100%;
+        }
         &-header {
             display: flex;
             justify-content: space-between;

@@ -32,7 +32,7 @@ export default {
 <style scoped lang="scss">
     a {
         display: block;
-        width: 66%;
+        width: 49%;
     }
     .card {
         width: 100%;
@@ -67,7 +67,5 @@ export default {
             
         }
     }
-    .card:last-child {
-        margin-bottom: 0;
-    }
+    
 </style>

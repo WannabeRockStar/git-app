@@ -80,7 +80,7 @@ export default createStore({
         license: true,
         stars: 2,
         forks: 12,
-        update: 'March 11, 2020',
+        updated: 'March 11, 2020',
         userId: 2,
       },
       {
@@ -90,65 +90,93 @@ export default createStore({
         license: true,
         stars: 5,
         forks: 3,
-        update: 'March 11, 2020',
+        updated: 'March 11, 2019',
         userId: 2
       },
       {
-        id: 2,
+        id: 3,
         title: 'Dolor',
         language: 'javascript',
         license: true,
         stars: 4,
         forks: 1,
-        update: 'March 11, 2020',
+        updated: 'March 11, 2021',
         userId: 2
       },
       {
-        id: 2,
+        id: 4,
         title: 'Dolor',
         language: 'javascript',
         license: true,
         stars: 5,
         forks: 35,
-        update: 'March 11, 2020',
+        updated: 'March 11, 2018',
         userId: 11
       },
       {
-        id: 2,
+        id: 5,
         title: 'Dolor',
         language: 'javascript',
         license: true,
         stars: 3,
         forks: 7,
-        update: 'March 11, 2020',
+        updated: 'March 11, 2012',
         userId: 3
       },
       {
-        id: 2,
+        id: 6,
         title: 'Dolor',
         language: 'javascript',
         license: true,
         stars: 2,
         forks: 10,
-        update: 'March 11, 2020',
+        updated: 'March 11, 2014',
         userId: 1
       },
       {
-        id: 2,
+        id: 7,
         title: 'Awesome Project',
         language: 'javascript',
         license: true,
         stars: 2,
         forks: 12,
-        update: 'March 11, 2020',
+        updated: 'March 10, 2020',
+        userId: 1
+      },
+      {
+        id: 8,
+        title: 'Random',
+        language: 'javascript',
+        license: true,
+        stars: 5,
+        forks: 3,
+        updated: 'March 15, 2019',
+        userId: 1
+      },
+      {
+        id: 9,
+        title: 'Custom',
+        language: 'javascript',
+        license: true,
+        stars: 5,
+        forks: 3,
+        updated: 'March 17, 2019',
+        userId: 1
+      },
+      {
+        id: 10,
+        title: 'Auto',
+        language: 'javascript',
+        license: true,
+        stars: 5,
+        forks: 3,
+        updated: 'March 3, 2019',
         userId: 1
       },
     ]
   },
   getters: {
-    getRepos(state) {
-      return state.repos
-    }
+    
   },
   mutations: {
   },

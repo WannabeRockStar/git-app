@@ -40,7 +40,7 @@ export default {
         border: 1px solid #eee;
         border-radius: 8px;
         padding: 1rem;
-        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+        box-shadow: $main-shadow;
         margin-bottom: 1rem;
         gap: 1rem;
         align-items: center;
@@ -50,7 +50,7 @@ export default {
         }
         &-image {
             border-radius: 50%;
-            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+            box-shadow: $image-shadow;
             width: 60px;
             height: 60px;
             overflow: hidden;
@@ -66,5 +66,8 @@ export default {
             position: absolute;
             
         }
+    }
+    .card:last-child {
+        margin-bottom: 0;
     }
 </style>

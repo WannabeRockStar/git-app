@@ -2,11 +2,16 @@
   <div class="home">
     <div>
         <form @submit.prevent="handleSearch">
-            <input type="text" v-model="name" class="form-control">
-            <select v-model="type" class="form-control">
+            <input type="text" v-model="name" placeholder="search" class="form-control">
+            <select v-model="type" class="form-control select-width">
                 <option value="">Any</option>
                 <option value="User">User</option>
                 <option value="Organisation">Organisation</option>
+            </select>
+            <select v-model.number="perPage" class="form-control select-width">
+                <option value="2">2</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
             </select>
         </form>
     </div>
@@ -23,7 +28,6 @@
 
 <script>
 // @ is an alias to /src
-import Repo from '@/components/Repo.vue'
 import User from '@/components/User.vue'
 import Filter from '@/components/Filter.vue'
 import Pagination from '@/components/Pagination.vue'
@@ -88,6 +92,9 @@ export default {
       outline: none;
       text-indent: 10px;
       font-size: 14px;
+    }
+    .select-width {
+      width: 150px;
     }
   }
 </style>

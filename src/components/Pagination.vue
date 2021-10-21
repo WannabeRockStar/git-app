@@ -112,13 +112,15 @@ export default {
 <style lang="scss" scoped>
     .pagination-list {
         display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
         list-style-type: none;
         gap: 4px;
         &-item {
             // background: red;
             border: 1px solid #eee;
             border-radius: 8px;
-            box-shadow: 0 2px 3px rgba(0, 0, 0, .25);
+            box-shadow: $main-shadow;
             padding: 2px;
             width: 30px;
             display: flex;
@@ -126,57 +128,20 @@ export default {
             align-items: center;
             cursor: pointer;
             &:hover {
-                background: #edf2f5;
+                background: #ddecf5;
                 
             }
         }
+         &-item.active {
+             background: #ddecf5;
+         }
         &-switch {
             border: 1px solid #eee;
             border-radius: 8px;
-            box-shadow: 0 2px 3px rgba(0, 0, 0, .25);
+            box-shadow: $main-shadow;
             padding: 2px 10px;
             width: auto;
             cursor: pointer;
         }
     }
-    
-    /* ul .pagination-button, 
-    ul .pagination-switch {
-        display: inline-block;
-        border: 1px solid #ccc;
-        cursor: pointer;
-        width: 36px;
-        height: 28px;
-        text-align: center;
-        line-height: 28px;
-        
-    }
-
-    ul .pagination-switch {
-        width: auto;
-        height: auto; 
-        padding: 0 .5rem;
-    }
-
-    ul .pagination-button:hover, 
-    ul .pagination-switch:hover {
-        background: #333;
-        color: #fff;
-    }
-
-    ul .pagination-button::selection, 
-    .dots::selection,
-    ul .pagination-switch::selection {
-        background: transparent
-    }
-
-   .active {
-        background: #333;
-        color: #fff;
-    }
-
-    .dots {
-        padding: 0 5px;
-        font-weight: 700;
-    } */
 </style>

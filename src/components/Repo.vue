@@ -12,7 +12,7 @@
                 public
             </div>
         </div>
-        <p class="repo-subtitle">PSD to html / Responsive</p>
+        <p class="repo-subtitle">{{ data.updated }}</p>
 
         <div class="repo-footer">
             <div class="repo-lang">
@@ -58,8 +58,7 @@ export default {
 <style scoped lang="scss">
     .repo {
         width: 49%;
-        background-color: var(--color-canvas-default);
-        border: 1px solid #d0d7de;
+        border: 1px solid $border-color;
         border-radius: 6px;
         padding: 1rem;
         cursor: pointer;

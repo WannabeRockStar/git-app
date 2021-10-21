@@ -33,6 +33,9 @@ export default {
     a {
         display: block;
         width: 49%;
+        @media(max-width: 660px) {
+            width: 100%;
+        }
     }
     .card {
         width: 100%;
@@ -45,6 +48,7 @@ export default {
         gap: 1rem;
         align-items: center;
         cursor: pointer;
+        
         &-title {
             color: #2F334B;
         }
